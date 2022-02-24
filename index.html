@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Formulário de cadastro</title>
+</head>
+
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500">    
+    <div class="w-full h-full py-20">
+        <div class="bg-white rounded-xl p-7 mx-auto max-w-md"> 
+            <h1 class="font-medium text-xl mb-3">Formulário de cadastro</h1>
+            <ul class="mb-3">
+                <li class="text-sm list-disc list-inside text-gray-500">Nenhum campo pode estar vazio</li>
+                <li class="text-sm list-disc list-inside text-gray-500">Usuário só poderá conter letras e/ou números</li>
+                <li class="text-sm list-disc list-inside text-gray-500">Usuário deverá ter entre 3 e 12 caracteres</li>
+                <li class="text-sm list-disc list-inside text-gray-500">Senha precisa ter entre 6 e 12 caracteres</li>
+            </ul>
+
+            <form action="/" method="POST" data-form autocomplete="off">
+                <label for="first_name" class="text-sm">Nome</label>
+                <input id="first_name" name="first_name" type="text" data-validate
+                       class="bg-slate-50 rounded-md border border-cyan-600 text-neutral-700 py-1 px-2 text-sm outline-2 outline-cyan-700 w-full mb-2">
+
+                <label for="last_name" class="text-sm">Sobrenome</label>
+                <input id="last_name" name="last_name" type="text" data-validate
+                       class="bg-slate-50 rounded-md border border-cyan-600 text-neutral-700 py-1 px-2 text-sm outline-2 outline-cyan-700 w-full mb-2">
+
+                <label for="cpf" class="text-sm">CPF</label>
+                <input id="cpf" name="cpf" type="text" data-validate data-mask
+                       class="bg-slate-50 rounded-md border border-cyan-600 text-neutral-700 py-1 px-2 text-sm outline-2 outline-cyan-700 w-full mb-2">
+
+                <label for="user" class="text-sm">Usuário</label>
+                <input id="user" name="user" type="text" data-validate
+                       class="bg-slate-50 rounded-md border border-cyan-600 text-neutral-700 py-1 px-2 text-sm outline-2 outline-cyan-700 w-full mb-2">
+
+                <label for="password" class="text-sm">Senha</label>
+                <input id="password" name="password" type="password" data-validate
+                       class="bg-slate-50 rounded-md border border-cyan-600 text-neutral-700 py-1 px-2 text-sm outline-2 outline-cyan-700 w-full mb-2">
+
+                <label for="repeat_password" class="text-sm">Repetir senha</label>
+                <input id="repeat_password" name="repeat_password" type="password" data-validate
+                       class="bg-slate-50 rounded-md border border-cyan-600 text-neutral-700 py-1 px-2 text-sm outline-2 outline-cyan-700 w-full mb-2">
+
+                <button class="bg-cyan-500 text-white text-sm rounded-md py-2 px-2 outline-cyan-700 transition active:bg-cyan-600 w-full mt-2">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./js/CPFValidator.js"></script>
+    <script src="./js/FormValidator.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
